@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+  <body>
+    
+    <!--Title and subtitle-->
+    <div class="title">
+      <h1 id="title">Lima Survey Form</h1>
+      <p class="subtitle" id="description">Thank you for taking the time to help us improve the city</p>
+    </div>
+
+    <!--Form container-->
+    <div class="form-container">
+      <form id="survey-form">
+
+        <!--Name-->
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input 
+            id="name" 
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            required>
+        </div>
+
+        <!--Email-->
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input 
+            id="email" 
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required>
+        </div>
+
+        <!--Age-->
+        <div class="form-group">
+          <label id="number-label" for="number">Age (optional)</label>
+          <input 
+            id="number" 
+            name="age"
+            type="number"
+            placeholder="Enter your age"
+            min="10"
+            max="120">
+        </div>
+
+        <!--Dropdown-->
+        <div class="form-group">
+          <label id="select" for="dropdown">Please select your role</label>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+  <!-- Radio Buttons Grouped -->
+<div class="form-group fieldset-group">
+  <fieldset>
+    <legend>Do you enjoy living in Lima?</legend>
+    <label>
+      <input type="radio" value="Yes" name="enjoy-lima" class="input-radio" checked> Yes
+    </label>
+    <label>
+      <input type="radio" value="No" name="enjoy-lima" class="input-radio"> No
+    </label>
+    <label>
+      <input type="radio" value="Sometimes" name="enjoy-lima" class="input-radio"> Sometimes
+    </label>
+  </fieldset>
+</div>
+
+        <!--Dropdown-2-->
+        <div class="form-group">
+          <label id="select" for="dropdown">Please select your work mode</label>
+          <select id="dropdown" name="work-mode" class="form-control" required>
+            <option value="" disabled selected>Please select your work mode</option>
+            <option value="on-site">On site</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="remote">Remote</option>
+          </select>
+        </div>
+
+<!-- Checkbox Grouped -->
+<div class="form-group fieldset-group">
+  <fieldset>
+    <legend>Where do you like to hang out?</legend>
+    <label>
+      <input type="checkbox" name="prefer" value="miraflores" class="inline"> Miraflores
+    </label>
+    <label>
+      <input type="checkbox" name="prefer" value="san-isidro" class="inline"> San Isidro
+    </label>
+    <label>
+      <input type="checkbox" name="prefer" value="barrancos" class="inline"> Barrancos
+    </label>
+  </fieldset>
+</div>
+
+        <!--Comments-->
+        <div class="form-group">
+          <label for="comments">Any comments on how do you enjoy the city?</label>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comments here..."
+            rows="5" 
+            cols="60"></textarea>
+        </div>
+
+        <!--Button-->
+        <div class="form-group">
+          <input 
+            id="submit" 
+            type="submit" 
+            value="Submit Survey"
+            class="submit-button">
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
